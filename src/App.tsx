@@ -1,3 +1,4 @@
+import NavBar from "./components/NavBar";
 import PokemonCard from "./components/PokemonCard";
 import { useState } from "react";
 
@@ -49,13 +50,15 @@ function App() {
     }
   };
 
+  const btn = {
+    suivant: decremente,
+    precedent: incremente,
+  }
+
   return (
     <>
       <PokemonCard pokemon={pokemon} />
-      <div>
-        <button onClick={incremente}>précédent</button>
-        <button onClick={decremente}>suivant</button>
-      </div>
+      <NavBar btn={btn} />
     </>
   );
 }
