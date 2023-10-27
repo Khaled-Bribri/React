@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import NavBar from "./components/NavBar";
 import PokemonCard from "./components/PokemonCard";
 
