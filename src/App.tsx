@@ -1,6 +1,4 @@
-import { useState } from "react";
 import NavBar from "./components/NavBar";
-import PokemonCard from "./components/PokemonCard";
 
 const pokemonList = [
   {
@@ -25,12 +23,9 @@ const pokemonList = [
 ];
 
 function App() {
-  const [pokemonIndex, setPokemonIndex] = useState(0);
-
   return (
     <div>
-      <NavBar pokemonIndex={pokemonIndex} setPokemonIndex={setPokemonIndex} pokemonList={pokemonList} />
-      <PokemonCard pokemon={pokemonList[pokemonIndex]} />
+      <NavBar pokemonList={pokemonList} />
     </div>
   );
 }
